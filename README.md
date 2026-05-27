@@ -202,6 +202,9 @@ namespace CyberSecurityBotGUI
             {
                 DisplayBotMessage("Voice greeting unavailable.");
             }
+            }
+            }
+            }
 
             <Window x:Class="CyberSecurityBotGUI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -284,6 +287,5 @@ namespace CyberSecurityBotGUI
 
     </Grid>
 </Window>
-        }
-    }
-}
+
+
