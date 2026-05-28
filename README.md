@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Media;
 using System.Windows;
 
-namespace CyberSecurityBotGUI
+namespace POEPART2YEAR2
 {
     public partial class MainWindow : Window
     {
@@ -16,6 +16,8 @@ namespace CyberSecurityBotGUI
 
         // DELEGATE
         delegate string BotResponse(string input);
+
+        BotResponse responseDelegate;
 
         // COLLECTION
         Dictionary<string, List<string>> responses =
@@ -86,8 +88,13 @@ namespace CyberSecurityBotGUI
         {
             string input = UserInput.Text.Trim();
 
+            // ERROR HANDLING
             if (string.IsNullOrWhiteSpace(input))
+            {
+                DisplayBotMessage("Please enter a message.");
+
                 return;
+            }
 
             DisplayUserMessage(input);
 
@@ -174,8 +181,15 @@ namespace CyberSecurityBotGUI
                 }
             }
 
-            // DEFAULT RESPONSE
-            DisplayBotMessage("I did not understand that. Ask me about passwords, phishing, malware, VPNs, or privacy.");
+            // DELEGATE USAGE
+            responseDelegate = GetHelpResponse;
+
+            DisplayBotMessage(responseDelegate(input));
+        }
+
+        private string GetHelpResponse(string input)
+        {
+            return "I did not understand that. Ask me about passwords, phishing, malware, VPNs, or privacy.";
         }
 
         private void DisplayUserMessage(string message)
@@ -202,10 +216,9 @@ namespace CyberSecurityBotGUI
             {
                 DisplayBotMessage("Voice greeting unavailable.");
             }
-            }
-            }
-            }
-
+        }
+    }
+}
             <Window x:Class="CyberSecurityBotGUI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
