@@ -19,7 +19,7 @@ namespace POEPART2YEAR2
 
         BotResponse responseDelegate;
 
-        // COLLECTION
+        // COLLECTION WITH MORE TOPICS + DETAILED RESPONSES
         Dictionary<string, List<string>> responses =
             new Dictionary<string, List<string>>()
         {
@@ -27,9 +27,11 @@ namespace POEPART2YEAR2
                 "password",
                 new List<string>()
                 {
-                    "Use strong passwords with symbols and numbers.",
-                    "Avoid using personal information in passwords.",
-                    "Use different passwords for every account."
+                    "Strong passwords should contain uppercase letters, lowercase letters, numbers, and symbols. Avoid using easy information like birthdays or names because hackers can guess them easily.",
+
+                    "Using the same password for multiple accounts is risky. If one account is hacked, attackers can gain access to all your other accounts as well.",
+
+                    "A password manager can help you generate and store secure passwords safely so that you do not need to remember every password yourself."
                 }
             },
 
@@ -37,9 +39,11 @@ namespace POEPART2YEAR2
                 "phishing",
                 new List<string>()
                 {
-                    "Never click suspicious email links.",
-                    "Check the sender email carefully.",
-                    "Phishing scams pretend to be trusted companies."
+                    "Phishing is a cyberattack where criminals pretend to be trusted organisations to trick people into giving away sensitive information such as passwords or banking details.",
+
+                    "Always check email addresses carefully before clicking links. Many phishing emails look real but contain small spelling mistakes or suspicious domains.",
+
+                    "If an email creates urgency such as 'Your account will be locked immediately', it could be a phishing attempt designed to pressure you into acting quickly."
                 }
             },
 
@@ -47,9 +51,11 @@ namespace POEPART2YEAR2
                 "malware",
                 new List<string>()
                 {
-                    "Install antivirus software.",
-                    "Avoid unsafe downloads.",
-                    "Keep your computer updated."
+                    "Malware is malicious software designed to damage systems, steal data, or spy on users. Examples include viruses, worms, ransomware, and spyware.",
+
+                    "Avoid downloading files from unknown websites because malware is often hidden inside fake software, pirated programs, or suspicious attachments.",
+
+                    "Keeping your operating system and antivirus software updated helps protect your device against newly discovered malware threats."
                 }
             },
 
@@ -57,9 +63,11 @@ namespace POEPART2YEAR2
                 "vpn",
                 new List<string>()
                 {
-                    "VPNs protect your online privacy.",
-                    "Use a VPN on public Wi-Fi.",
-                    "VPNs encrypt internet traffic."
+                    "A VPN, or Virtual Private Network, encrypts your internet traffic and protects your privacy when browsing online.",
+
+                    "Using public Wi-Fi without a VPN can expose your personal information to hackers who may intercept your internet traffic.",
+
+                    "VPNs can also help prevent websites and advertisers from tracking your online activities and collecting your browsing data."
                 }
             },
 
@@ -67,9 +75,119 @@ namespace POEPART2YEAR2
                 "privacy",
                 new List<string>()
                 {
-                    "Review your privacy settings regularly.",
-                    "Do not overshare online.",
-                    "Enable two-factor authentication."
+                    "Protecting your privacy online means controlling who can access your personal information and how it is shared.",
+
+                    "Avoid posting sensitive information such as your address, passwords, banking details, or personal documents online.",
+
+                    "Always review privacy settings on social media platforms to control who can view your content and personal details."
+                }
+            },
+
+            {
+                "firewall",
+                new List<string>()
+                {
+                    "A firewall acts as a security barrier between your computer and the internet by blocking suspicious or unauthorised traffic.",
+
+                    "Firewalls help prevent hackers from gaining unauthorised access to your device or network.",
+
+                    "Both hardware and software firewalls are important for protecting systems against cyber threats."
+                }
+            },
+
+            {
+                "antivirus",
+                new List<string>()
+                {
+                    "Antivirus software scans your computer for malicious programs and helps remove threats before they can cause damage.",
+
+                    "Regular antivirus scans are important because cyber threats are constantly evolving and new malware appears every day.",
+
+                    "Keeping your antivirus updated ensures that it can detect the latest cyber threats effectively."
+                }
+            },
+
+            {
+                "social engineering",
+                new List<string>()
+                {
+                    "Social engineering is when attackers manipulate people into revealing confidential information rather than hacking systems directly.",
+
+                    "Cybercriminals often pretend to be trusted individuals such as IT staff, banks, or company employees to gain your trust.",
+
+                    "Always verify a person's identity before sharing passwords, OTPs, or sensitive company information."
+                }
+            },
+
+            {
+                "ransomware",
+                new List<string>()
+                {
+                    "Ransomware is a type of malware that locks or encrypts files and demands payment to restore access.",
+
+                    "Backing up important files regularly can help you recover data without paying cybercriminals.",
+
+                    "Never open suspicious email attachments because ransomware is commonly spread through phishing emails."
+                }
+            },
+
+            {
+                "2fa",
+                new List<string>()
+                {
+                    "Two-factor authentication adds an extra layer of security by requiring a second verification step in addition to your password.",
+
+                    "Even if hackers steal your password, two-factor authentication can still help prevent unauthorised access to your account.",
+
+                    "Authentication apps are usually safer than SMS codes because text messages can sometimes be intercepted."
+                }
+            },
+
+            {
+                "scam",
+                new List<string>()
+                {
+                    "Online scams are designed to trick users into sending money or revealing personal information.",
+
+                    "Be cautious of messages promising prizes, quick money, or urgent requests because these are common scam tactics.",
+
+                    "If something online seems too good to be true, it is usually a scam."
+                }
+            },
+
+            {
+                "cyberbullying",
+                new List<string>()
+                {
+                    "Cyberbullying involves using technology to harass, threaten, or embarrass another person online.",
+
+                    "If you experience cyberbullying, avoid responding to harmful messages and report the behaviour to the platform.",
+
+                    "Saving screenshots of harmful messages can help provide evidence when reporting cyberbullying incidents."
+                }
+            },
+
+            {
+                "data breach",
+                new List<string>()
+                {
+                    "A data breach occurs when sensitive information is accessed, stolen, or exposed without authorisation.",
+
+                    "Companies should encrypt sensitive data and implement strong access controls to reduce the risk of data breaches.",
+
+                    "If you are notified about a data breach, change your passwords immediately and monitor your accounts for suspicious activity."
+                }
+            },
+
+            {
+                "safe browsing",
+                new List<string>()
+                {
+                    "Safe browsing involves visiting trusted websites and avoiding suspicious links or downloads.",
+
+                    "Always look for HTTPS in the website address because it indicates that the connection is encrypted.",
+
+                    "Avoid clicking pop-up advertisements or downloading files from untrusted websites because they may contain malware."
                 }
             }
         };
@@ -92,7 +210,6 @@ namespace POEPART2YEAR2
             if (string.IsNullOrWhiteSpace(input))
             {
                 DisplayBotMessage("Please enter a message.");
-
                 return;
             }
 
@@ -128,23 +245,23 @@ namespace POEPART2YEAR2
             // SENTIMENT DETECTION
             if (input.Contains("worried") || input.Contains("scared"))
             {
-                DisplayBotMessage("It is understandable to feel worried.");
+                DisplayBotMessage("It is understandable to feel worried about cybersecurity threats.");
 
-                DisplayBotMessage("Remember to use strong passwords and avoid suspicious links.");
+                DisplayBotMessage("Remember to use strong passwords, avoid suspicious links, and keep your software updated.");
 
                 return;
             }
 
             if (input.Contains("frustrated") || input.Contains("angry"))
             {
-                DisplayBotMessage("I understand your frustration.");
+                DisplayBotMessage("I understand your frustration. Cybersecurity can sometimes feel overwhelming, but learning safe practices helps reduce risks.");
 
                 return;
             }
 
             if (input.Contains("curious"))
             {
-                DisplayBotMessage("Curiosity is great for learning cybersecurity.");
+                DisplayBotMessage("Curiosity is great for learning cybersecurity and staying informed about online safety.");
 
                 return;
             }
@@ -154,11 +271,11 @@ namespace POEPART2YEAR2
             {
                 if (!string.IsNullOrEmpty(favouriteTopic))
                 {
-                    DisplayBotMessage($"Since you like {favouriteTopic}, remember to keep your accounts secure.");
+                    DisplayBotMessage($"Since you are interested in {favouriteTopic}, remember to stay informed and use secure online practices.");
                 }
                 else
                 {
-                    DisplayBotMessage("Always keep your software updated.");
+                    DisplayBotMessage("Always keep your software updated and avoid clicking suspicious links or downloading unknown files.");
                 }
 
                 return;
@@ -189,7 +306,7 @@ namespace POEPART2YEAR2
 
         private string GetHelpResponse(string input)
         {
-            return "I did not understand that. Ask me about passwords, phishing, malware, VPNs, or privacy.";
+            return "I did not understand that. You can ask me about passwords, phishing, malware, VPNs, privacy, ransomware, antivirus, social engineering, scams, firewalls, safe browsing, or two-factor authentication.";
         }
 
         private void DisplayUserMessage(string message)
